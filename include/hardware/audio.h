@@ -175,6 +175,14 @@ __BEGIN_DECLS
 /**************************************/
 
 /* common audio stream configuration parameters */
+struct audio_config {
+    uint32_t sample_rate;
+    audio_channel_mask_t channel_mask;
+    audio_format_t  format;
+    audio_offload_info_t offload_info;
+    size_t frame_count;
+};
+
 typedef struct audio_config audio_config_t;
 
 #ifdef QCOM_HARDWARE
